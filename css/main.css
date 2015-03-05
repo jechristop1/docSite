@@ -48,9 +48,7 @@ table {
 Index.html Styles
 ****************/
 * {
-  -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;
   /* Firefox, other Gecko */
   box-sizing: border-box;
   /* Opera/IE 8+ */ }
@@ -60,9 +58,6 @@ Index.html Styles
 
 html {
   background: url(../images/feature01.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   box-sizing: border-box; }
 
@@ -92,7 +87,8 @@ nav {
   -ms-flex-align: center;
   align-items: center;
   -webkit-justify-content: space-around;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
   background: #eee;
   padding: 20px;
@@ -113,7 +109,6 @@ nav {
       visibility: hidden;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
-      -webkit-transition: all 0.25s ease-in-out 0s;
       transition: all 0.25s ease-in-out 0s; }
     nav .link a {
       text-decoration: none;
@@ -132,14 +127,18 @@ Media Queries
 ****************/
 @media (max-width: 650px) {
   nav {
-    flex-wrap: wrap; }
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
 
   .link {
-    order: 0 !important; }
+    -webkit-order: 0 !important;
+        -ms-flex-order: 0 !important;
+            order: 0 !important; }
 
   .brandName {
     display: none;
     width: 100%;
     margin: 15px; } }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=to.css.map */
