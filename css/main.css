@@ -137,6 +137,7 @@ nav .link a:before {
   -webkit-transform: scaleX(0);
   -ms-transform: scaleX(0);
       transform: scaleX(0);
+<<<<<<< HEAD
   transition: all 0.25s ease-in-out 0s;
 }
 nav .link a {
@@ -154,6 +155,20 @@ nav .link a:hover:before {
 nav .brandName {
   color: #ccc;
 }
+=======
+      transition: all 0.25s ease-in-out 0s; }
+    nav .link a {
+      text-decoration: none;
+      color: #ccc;
+      font-size: 1.5em;
+      font-weight: bold; }
+    nav .link a:hover:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1); }
+  nav .brandName {
+    color: #ccc; }
+>>>>>>> 8ecd758b0c6c56251f933e148f5d0c9c3199423a
 
 /***************
 Media Queries
@@ -162,18 +177,32 @@ Media Queries
   nav {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
+<<<<<<< HEAD
             flex-wrap: wrap;
   }
+=======
+            flex-wrap: wrap; }
+>>>>>>> 8ecd758b0c6c56251f933e148f5d0c9c3199423a
 
   .link {
     -webkit-order: 0 !important;
         -ms-flex-order: 0 !important;
+<<<<<<< HEAD
             order: 0 !important;
   }
+=======
+            order: 0 !important; }
+>>>>>>> 8ecd758b0c6c56251f933e148f5d0c9c3199423a
 
   .brandName {
     display: none;
     width: 100%;
+<<<<<<< HEAD
     margin: 15px;
   }
 }
+=======
+    margin: 15px; } }
+
+/*# sourceMappingURL=to.css.map */
+>>>>>>> 8ecd758b0c6c56251f933e148f5d0c9c3199423a
