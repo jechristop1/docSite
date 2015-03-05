@@ -92,10 +92,12 @@ body#indexBody::after {
   overflow: hidden;
 }
 
+
 nav {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
@@ -110,8 +112,20 @@ nav {
   > * {
     margin: 0 10px;
   }
+
+
   .link {
     position: relative;
+    ul {
+      border: 2px solid white;
+      padding: 10px;
+      li {
+        list-style: none;
+        display: inline-block;
+        margin: 5px 25px;
+      }
+    }
+
     a:before {
       content: "";
       position: absolute;
@@ -142,6 +156,7 @@ nav {
     color: #ccc;
 
   }
+
 }
 
 

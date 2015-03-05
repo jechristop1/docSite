@@ -19,56 +19,62 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
-  content: none; }
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 /***************
 Index.html Styles
 ****************/
 * {
-  -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;
   /* Firefox, other Gecko */
-  box-sizing: border-box;
-  /* Opera/IE 8+ */ }
+  box-sizing: border-box
+  /* Opera/IE 8+ */
+}
 
 *, *:before, *:after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
   background: url(../images/feature01.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Lato', sans-serif;
-  font: 100%; }
+  font: 100%;
+}
 
 body#indexBody::after {
   content: "";
@@ -82,64 +88,92 @@ body#indexBody::after {
   z-index: -1;
   min-width: 100vw;
   min-height: 100vh;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 nav {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-justify-content: space-around;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
   background: #eee;
   padding: 20px;
   margin: 0 0 20px 0;
-  background-color: transparent; }
-  nav > * {
-    margin: 0 10px; }
-  nav .link {
-    position: relative; }
-    nav .link a:before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      bottom: -5px;
-      left: 0;
-      background-color: #ccc;
-      visibility: hidden;
-      -webkit-transform: scaleX(0);
+  background-color: transparent;
+}
+nav > * {
+  margin: 0 10px;
+}
+nav .link {
+  position: relative;
+}
+nav .link ul {
+  border: 2px solid white;
+  padding: 10px;
+}
+nav .link ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 5px 25px;
+}
+nav .link a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ccc;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
       transform: scaleX(0);
-      -webkit-transition: all 0.25s ease-in-out 0s;
-      transition: all 0.25s ease-in-out 0s; }
-    nav .link a {
-      text-decoration: none;
-      color: #ccc;
-      font-size: 1.5em;
-      font-weight: bold; }
-    nav .link a:hover:before {
-      visibility: visible;
-      -webkit-transform: scaleX(1);
-      transform: scaleX(1); }
-  nav .brandName {
-    color: #ccc; }
+  transition: all 0.25s ease-in-out 0s;
+}
+nav .link a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+nav .link a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+      transform: scaleX(1);
+}
+nav .brandName {
+  color: #ccc;
+}
 
 /***************
 Media Queries
 ****************/
 @media (max-width: 650px) {
   nav {
-    flex-wrap: wrap; }
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
 
   .link {
-    order: 0 !important; }
+    -webkit-order: 0 !important;
+        -ms-flex-order: 0 !important;
+            order: 0 !important;
+  }
 
   .brandName {
     display: none;
     width: 100%;
-    margin: 15px; } }
-
-/*# sourceMappingURL=main.css.map */
+    margin: 15px;
+  }
+}
