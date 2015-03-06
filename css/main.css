@@ -74,6 +74,20 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   font: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 body#indexBody::after {
@@ -99,61 +113,51 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   background: #eee;
   padding: 20px;
   margin: 0 0 20px 0;
   background-color: transparent;
 }
-nav .link {
-  position: relative;
-  width: 70vw;
+nav .linksContainer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+nav .linksContainer .links {
   text-align: center;
+  border: 2px solid whitesmoke;
+  padding: 10px;
 }
-nav .link ul {
-  padding: 10px 0;
-  border: 2px solid white;
-  width: 100%;
-}
-nav .link ul li {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 45%;
-  display: inline-block;
-  text-align: center;
-}
-nav .link ul li a {
+nav .linksContainer .links a {
+  color: #fff;
   text-decoration: none;
-  color: white;
-  font-size: 3.5vw;
-  width: 100%;
+  padding: 10px 50px;
+  font-size: 3vw;
 }
-nav .brandName {
-  color: #ccc;
+nav .linksContainer .links:hover {
+  border: 2px solid #8c0726;
+  background-color: whitesmoke;
+}
+nav .linksContainer .links:hover a {
+  color: #af052a;
 }
 
 /***************
 Media Queries
 ****************/
 @media (max-width: 650px) {
-  nav {
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-  }
-
-  .link {
-    -webkit-order: 0 !important;
-        -ms-flex-order: 0 !important;
-            order: 0 !important;
-  }
-
   .brandName {
     display: none;
     width: 100%;

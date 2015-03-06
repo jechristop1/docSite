@@ -1,3 +1,6 @@
+$red: #8c0726;
+$grey: lighten(darkgrey, 30%);
+
 /***************
 CSS reset
 ****************/
@@ -75,6 +78,12 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   font: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 body#indexBody::after {
@@ -98,59 +107,39 @@ nav {
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   background: #eee;
   padding: 20px;
   margin: 0 0 20px 0;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
+  .linksContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .links {
+      text-align: center;
+      border: 2px solid $grey;
+      padding: 10px;
+      a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 50px;
+        font-size: 3vw;
+      }
+    }
+    .links:hover{
+      border: 2px solid $red;
+      background-color: $grey;
+      a{
+        color: #af052a
 
-
-
-
-
-
-
-  .link {
-    position: relative;
-    width: 70vw;
-    text-align: center;
-
-    ul {
-      padding: 10px 0;
-      border: 2px solid white;
-      width: 100%;
-      li {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        width: 45%;
-        display: inline-block;
-        text-align: center;
-
-        a{
-          text-decoration: none;
-          color: white;
-          font-size: 3.5vw;
-          width: 100%;
-        }
       }
     }
 
   }
-
-
-  .brandName{
-    color: #ccc;
-
-  }
-
 }
-
 
 
 
@@ -166,12 +155,7 @@ Media Queries
 
 
 @media (max-width: 650px) {
-  nav {
-    flex-wrap: wrap;
-  }
-  .link {
-    order: 0 !important;
-  }
+
   .brandName {
     display: none;
     width: 100%;
