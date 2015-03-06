@@ -93,7 +93,7 @@ body {
 body#indexBody::after {
   content: "";
   background-color: black;
-  opacity: 0.2;
+  opacity: 0.4;
   top: 0;
   left: 0;
   bottom: 0;
@@ -124,6 +124,29 @@ nav {
   margin: 0 0 20px 0;
   background-color: transparent;
 }
+nav #nameDiv h1 {
+  margin: 10px 0;
+  font-family: "Contrail One", cursive;
+  font-size: 6vw;
+  text-align: center;
+  color: whitesmoke;
+  text-shadow: 1px 1px 2px whitesmoke, 2px 2px 4px #b10326;
+}
+nav hr {
+  border: 0;
+  height: 1px;
+  width: 65vw;
+  background: rgba(255, 255, 255, 0);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(176, 5, 42, 0.75) 50%, rgba(176, 5, 42, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+}
+nav #slogan {
+  margin: 25px 0;
+  font-family: "Khand", sans-serif;
+  font-size: 2.5vw;
+  color: whitesmoke;
+  text-align: center;
+}
 nav .linksContainer {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -134,20 +157,24 @@ nav .linksContainer {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 10px 0;
 }
 nav .linksContainer .links {
   text-align: center;
-  border: 2px solid whitesmoke;
+  border: 1px solid whitesmoke;
   padding: 10px;
 }
 nav .linksContainer .links a {
-  color: #fff;
+  font-family: "Khand", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: #e6e6e6;
   text-decoration: none;
   padding: 10px 50px;
   font-size: 3vw;
 }
 nav .linksContainer .links:hover {
-  border: 2px solid #8c0726;
+  border: 1px solid dimgrey;
   background-color: whitesmoke;
 }
 nav .linksContainer .links:hover a {
@@ -157,10 +184,28 @@ nav .linksContainer .links:hover a {
 /***************
 Media Queries
 ****************/
-@media (max-width: 650px) {
-  .brandName {
+@media screen and (max-width: 450px) {
+  nav #nameDiv h1 {
+    font-size: 9vw;
+  }
+
+  nav #slogan {
     display: none;
+  }
+
+  .linksContainer {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .linksContainer .links {
+    width: 210px;
+    margin: 15px 0;
+  }
+
+  nav .linksContainer .links a {
     width: 100%;
-    margin: 15px;
+    font-size: 5vw;
+    padding: 10px 0px;
   }
 }

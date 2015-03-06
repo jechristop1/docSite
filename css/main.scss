@@ -1,5 +1,9 @@
-$red: #8c0726;
+$red: #b10326;
 $grey: lighten(darkgrey, 30%);
+$links: darken(white, 10%);
+$nameFont: 'Contrail One', cursive;
+$textFont: 'Khand', sans-serif;
+
 
 /***************
 CSS reset
@@ -89,7 +93,7 @@ body {
 body#indexBody::after {
   content: "";
   background-color: black;
-  opacity: 0.2;
+  opacity: 0.4;
   top: 0;
   left: 0;
   bottom: 0;
@@ -114,23 +118,51 @@ nav {
   padding: 20px;
   margin: 0 0 20px 0;
   background-color: rgba(0, 0, 0, 0);
+
+  #nameDiv h1{
+    margin: 10px 0;
+    font-family: $nameFont;
+    font-size: 6vw;
+    text-align: center;
+    color: $grey;
+    text-shadow: 1px 1px 2px $grey,
+                  2px 2px 4px $red;
+  }
+  hr{
+    border: 0;
+    height: 1px;
+    width: 65vw;
+    background: rgba(255,255,255,0);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 50%, rgba(176,5,42,0.75) 50%, rgba(176,5,42,0) 100%);    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );  }
+  #slogan{
+    margin: 25px 0;
+    font-family: $textFont;
+    font-size: 2.5vw;
+    color: $grey;
+    text-align: center;
+  }
   .linksContainer {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 10px 0;
     .links {
       text-align: center;
-      border: 2px solid $grey;
+      border: 1px solid $grey;
       padding: 10px;
       a {
-        color: #fff;
+        font-family: $textFont;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        color: $links;
         text-decoration: none;
         padding: 10px 50px;
         font-size: 3vw;
+
       }
     }
     .links:hover{
-      border: 2px solid $red;
+      border: 1px solid dimgrey;
       background-color: $grey;
       a{
         color: #af052a
@@ -154,13 +186,30 @@ Media Queries
 
 
 
-@media (max-width: 650px) {
+@media screen and (max-width: 450px) {
 
-  .brandName {
-    display: none;
-    width: 100%;
-    margin: 15px;
+  nav #nameDiv h1 {
+    font-size: 9vw;
   }
+  nav #slogan{
+    display: none;
+  }
+  .linksContainer{
+    flex-direction: column;
+    .links{
+      width: 210px;
+      margin: 15px 0;
+    }
+  }
+  nav .linksContainer .links a{
+    width: 100%;
+    font-size: 5vw;
+    padding: 10px 0px;
+
+  }
+
+
+
 
 }
 
