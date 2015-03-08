@@ -1,8 +1,20 @@
 $red: #b10326;
 $grey: lighten(darkgrey, 30%);
 $links: darken(white, 10%);
-$nameFont: 'Contrail One', cursive;
-$textFont: 'Khand', sans-serif;
+$textFont: 'Constantine', 'Quattrocento', serif;
+$headFont: 'Optimus', 'Quattrocento', serif;
+$slogan: 'Ubuntu Condensed', serif;
+
+
+@font-face {
+  font-family: 'Constantine';
+  src: url('/fonts/Constantine.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Optimus';
+  src: url('/fonts/OptimusPrincepsSemiBold.ttf') format('truetype');
+}
 
 
 /***************
@@ -121,12 +133,12 @@ nav {
 
   #nameDiv h1{
     margin: 10px 0;
-    font-family: $nameFont;
+    font-family: $headFont;
     font-size: 6vw;
+    font-weight: bold;
     text-align: center;
     color: $grey;
-    text-shadow: 1px 1px 2px $grey,
-                  2px 2px 4px $red;
+    letter-spacing: 1px;
   }
   hr{
     border: 0;
@@ -135,9 +147,9 @@ nav {
     background: rgba(255,255,255,0);
     background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 50%, rgba(176,5,42,0.75) 50%, rgba(176,5,42,0) 100%);    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );  }
   #slogan{
-    margin: 25px 0;
-    font-family: $textFont;
-    font-size: 2.5vw;
+    margin: 40px 0;
+    font-family: $slogan;
+    font-size: 2.2vw;
     color: $grey;
     text-align: center;
   }
@@ -148,10 +160,10 @@ nav {
     margin: 10px 0;
     .links {
       text-align: center;
-      border: 1px solid $grey;
+      outline: 1px solid $grey;
       padding: 10px;
       a {
-        font-family: $textFont;
+        font-family: $headFont;
         font-weight: bold;
         letter-spacing: 1.5px;
         color: $links;
@@ -162,10 +174,9 @@ nav {
       }
     }
     .links:hover{
-      border: 1px solid dimgrey;
       background-color: $grey;
       a{
-        color: #af052a
+        color: #333333;
 
       }
     }
@@ -186,10 +197,10 @@ Media Queries
 
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 585px) {
 
   nav #nameDiv h1 {
-    font-size: 9vw;
+    font-size: 8vw;
   }
   nav #slogan{
     display: none;
@@ -203,7 +214,7 @@ Media Queries
   }
   nav .linksContainer .links a{
     width: 100%;
-    font-size: 5vw;
+    font-size: 3.5vw;
     padding: 10px 0px;
 
   }

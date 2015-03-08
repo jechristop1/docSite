@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Constantine';
+  src: url("/fonts/Constantine.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Optimus';
+  src: url("/fonts/OptimusPrincepsSemiBold.ttf") format("truetype");
+}
 /***************
 CSS reset
 ****************/
@@ -126,11 +134,12 @@ nav {
 }
 nav #nameDiv h1 {
   margin: 10px 0;
-  font-family: "Contrail One", cursive;
+  font-family: "Optimus", "Quattrocento", serif;
   font-size: 6vw;
+  font-weight: bold;
   text-align: center;
   color: whitesmoke;
-  text-shadow: 1px 1px 2px whitesmoke, 2px 2px 4px #b10326;
+  letter-spacing: 1px;
 }
 nav hr {
   border: 0;
@@ -141,9 +150,9 @@ nav hr {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
 }
 nav #slogan {
-  margin: 25px 0;
-  font-family: "Khand", sans-serif;
-  font-size: 2.5vw;
+  margin: 40px 0;
+  font-family: "Ubuntu Condensed", serif;
+  font-size: 2.2vw;
   color: whitesmoke;
   text-align: center;
 }
@@ -161,11 +170,11 @@ nav .linksContainer {
 }
 nav .linksContainer .links {
   text-align: center;
-  border: 1px solid whitesmoke;
+  outline: 1px solid whitesmoke;
   padding: 10px;
 }
 nav .linksContainer .links a {
-  font-family: "Khand", sans-serif;
+  font-family: "Optimus", "Quattrocento", serif;
   font-weight: bold;
   letter-spacing: 1.5px;
   color: #e6e6e6;
@@ -174,19 +183,18 @@ nav .linksContainer .links a {
   font-size: 3vw;
 }
 nav .linksContainer .links:hover {
-  border: 1px solid dimgrey;
   background-color: whitesmoke;
 }
 nav .linksContainer .links:hover a {
-  color: #af052a;
+  color: #333333;
 }
 
 /***************
 Media Queries
 ****************/
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 585px) {
   nav #nameDiv h1 {
-    font-size: 9vw;
+    font-size: 8vw;
   }
 
   nav #slogan {
@@ -205,7 +213,7 @@ Media Queries
 
   nav .linksContainer .links a {
     width: 100%;
-    font-size: 5vw;
+    font-size: 3.5vw;
     padding: 10px 0px;
   }
 }
