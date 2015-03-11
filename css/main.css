@@ -1,11 +1,9 @@
 @font-face {
   font-family: 'Constantine';
-  src: url("/fonts/Constantine.ttf") format("truetype");
-}
+  src: url("../fonts/Constantine.ttf") format("truetype"); }
 @font-face {
   font-family: 'Optimus';
-  src: url("/fonts/OptimusPrincepsSemiBold.ttf") format("truetype");
-}
+  src: url("../fonts/OptimusPrincepsSemiBold.ttf") format("truetype"); }
 /***************
 CSS reset
 ****************/
@@ -27,193 +25,174 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+  display: block; }
 
 body {
-  line-height: 1;
-}
+  line-height: 1; }
 
 ol, ul {
-  list-style: none;
-}
+  list-style: none; }
 
 blockquote, q {
-  quotes: none;
-}
+  quotes: none; }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
-  content: none;
-}
+  content: none; }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
 /***************
-Index.html Styles
+Main Styles
 ****************/
 * {
+  -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
   /* Firefox, other Gecko */
-  box-sizing: border-box
-  /* Opera/IE 8+ */
-}
+  box-sizing: border-box;
+  /* Opera/IE 8+ */ }
 
 *, *:before, *:after {
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
-html {
+body, html, .panel {
+  /* important */
+  height: 100%;
+  width: 100%; }
+
+#page1 {
   background: url(../images/feature01.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   box-sizing: border-box;
-}
-
-body {
-  font-family: 'Lato', sans-serif;
-  font: 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100vh;
-  width: 100vw;
-}
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%; }
+  #page1 nav {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #eee;
+    padding: 20px;
+    margin: 0 0 20px 0;
+    background-color: transparent; }
+    #page1 nav #nameDiv h1 {
+      margin: 10px 0;
+      font-family: "Optimus", serif;
+      font-size: 6vw;
+      font-weight: bold;
+      text-align: center;
+      color: whitesmoke;
+      letter-spacing: 1px; }
+    #page1 nav hr {
+      border: 0;
+      height: 1px;
+      width: 65vw;
+      background: rgba(255, 255, 255, 0);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(176, 5, 42, 0.75) 50%, rgba(176, 5, 42, 0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 ); }
+    #page1 nav #slogan {
+      margin: 40px 0;
+      font-family: "Ubuntu Condensed", serif;
+      font-size: 2.2vw;
+      color: whitesmoke;
+      text-align: center; }
+    #page1 nav .linksContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0; }
+      #page1 nav .linksContainer .links {
+        text-align: center;
+        outline: 1px solid whitesmoke;
+        padding: 10px;
+        width: 41vw; }
+        #page1 nav .linksContainer .links a {
+          font-family: "Optimus", serif;
+          font-weight: bold;
+          letter-spacing: 1.5px;
+          color: #e6e6e6;
+          text-decoration: none;
+          padding: 10px 20px;
+          font-size: 3vw; }
+      #page1 nav .linksContainer .links:hover {
+        background-color: whitesmoke; }
+        #page1 nav .linksContainer .links:hover a {
+          color: #333333; }
 
-body#indexBody::after {
-  content: "";
+#page2 {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  background-color: white; }
+
+#page3 {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
   background-color: black;
-  opacity: 0.4;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: fixed;
-  z-index: -1;
-  min-width: 100vw;
-  min-height: 100vh;
-  overflow: hidden;
-}
+  color: white; }
 
-nav {
+#page4 {
+  box-sizing: border-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  background: #eee;
-  padding: 20px;
-  margin: 0 0 20px 0;
-  background-color: transparent;
-}
-nav #nameDiv h1 {
-  margin: 10px 0;
-  font-family: "Optimus", "Quattrocento", serif;
-  font-size: 6vw;
-  font-weight: bold;
-  text-align: center;
-  color: whitesmoke;
-  letter-spacing: 1px;
-}
-nav hr {
-  border: 0;
-  height: 1px;
-  width: 65vw;
-  background: rgba(255, 255, 255, 0);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(176, 5, 42, 0.75) 50%, rgba(176, 5, 42, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
-}
-nav #slogan {
-  margin: 40px 0;
-  font-family: "Ubuntu Condensed", serif;
-  font-size: 2.2vw;
-  color: whitesmoke;
-  text-align: center;
-}
-nav .linksContainer {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 10px 0;
-}
-nav .linksContainer .links {
-  text-align: center;
-  outline: 1px solid whitesmoke;
-  padding: 10px;
-}
-nav .linksContainer .links a {
-  font-family: "Optimus", "Quattrocento", serif;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  color: #e6e6e6;
-  text-decoration: none;
-  padding: 10px 50px;
-  font-size: 3vw;
-}
-nav .linksContainer .links:hover {
-  background-color: whitesmoke;
-}
-nav .linksContainer .links:hover a {
-  color: #333333;
-}
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  background-color: dimgrey;
+  color: white; }
 
 /***************
 Media Queries
 ****************/
 @media screen and (max-width: 585px) {
   nav #nameDiv h1 {
-    font-size: 8vw;
-  }
+    font-size: 8vw; }
 
   nav #slogan {
-    display: none;
-  }
+    display: none; }
 
   .linksContainer {
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .linksContainer .links {
-    width: 210px;
-    margin: 15px 0;
-  }
+    flex-direction: column; }
+    .linksContainer .links {
+      width: 210px;
+      margin: 15px 0; }
 
   nav .linksContainer .links a {
     width: 100%;
     font-size: 3.5vw;
-    padding: 10px 0px;
-  }
-}
+    padding: 10px 0px; } }
+
+/*# sourceMappingURL=main.css.map */
