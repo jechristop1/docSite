@@ -184,6 +184,7 @@ body, html, .panel {
   justify-content: center;
   min-height: 100%;
   background-color: white;
+  text-align: center;
 
 }
 
@@ -198,6 +199,7 @@ body, html, .panel {
   min-height: 100%;
   background-color: black;
   color: white;
+  text-align: center;
 
 }
 
@@ -212,8 +214,47 @@ body, html, .panel {
   min-height: 100%;
   background-color: dimgrey;
   color: white;
+  text-align: center;
 
 }
+
+#page5{
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  background-color: steelblue;
+  color: white;
+  text-align: center;
+
+}
+
+#bottomNav{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  font-family: $headFont;
+
+}
+#bt-menu{
+    border-color: rgba(0,0,0,.3);
+}
+.bottomNav.bt-menu.bt-menu-open {
+  height: 100%;
+  border-width: 30px 30px 90px 30px;
+  background-color: rgba(0,0,0,0.3);
+  -webkit-transition: border-width 0.3s, background-color 0.3s;
+  transition: border-width 0.3s, background-color 0.3s;
+}
+
+
 
 
 /***************

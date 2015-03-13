@@ -3,7 +3,10 @@
 <head>
 	<title>Doc Joe Martin | Warrior FIT Rx</title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed"/>
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/style3.css" />
     <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/modernizr.custom.js"></script>
 </head>
 <body id="indexBody">
 
@@ -33,10 +36,39 @@
             </div>
 
         </nav>
+
+
+        <nav id="bt-menu" class="bt-menu">
+            <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+            <ul id="bottomNav">
+                <li><a href="#about" class="bt-icon icon-user-outline">About</a></li>
+                <li><a href="#warriorfitrx" class="bt-icon icon-sun">Warrior FIT Rx</a></li>
+                <!--<li><a href="#" class="bt-icon icon-windows">Work</a></li>-->
+                <!--<li><a href="#" class="bt-icon icon-speaker">Blog</a></li>-->
+                <li><a href="#chiropractic" class="bt-icon icon-star">Chiropractic</a></li>
+                <li><a href="#contact" class="bt-icon icon-bubble">Contact</a></li>
+            </ul>
+        </nav>
+
+
+
+
     </div>
 
-    <a id="warriorfitrx"></a>
+    <a id="about"></a>
     <div id="page2" class="panel">
+        <section>
+            <h1>About</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </section>
+
+    </div>
+
+
+
+
+    <a id="warriorfitrx"></a>
+    <div id="page3" class="panel">
         <section>
             <h1>Warrior FIT Rx</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -46,18 +78,21 @@
 
 
     <a id="chiropractic"></a>
-    <div id="page3" class="panel">
+    <div id="page4" class="panel">
         <h1>Chiropractic</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
     </div>
 
     <a id="contact"></a>
-    <div id="page4" class="panel">
+    <div id="page5" class="panel">
         <h1>Contact</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
     </div>
+
+    <!--Animated menu-->
+
 
 
     <!--SCRIPTS-->
@@ -65,4 +100,6 @@
     <script src="js/main.js"></script>
 
 </body>
+    <script src="js/classie.js"></script>
+    <script src="js/borderMenu.js"></script>
 </html>
