@@ -257,7 +257,7 @@ body, html, .panel {
   align-items: center;
   justify-content: center;
   min-height: 100%;
-  background-color: white;
+  background-color: tomato;
   text-align: center;
 
 }
@@ -318,7 +318,7 @@ body, html, .panel {
 
 }
 #bt-menu{
-    border-color: rgba(0,0,0,.1);
+    border-color: rgba(0,0,0,0);
 }
 .bottomNav.bt-menu.bt-menu-open {
   height: 100%;
